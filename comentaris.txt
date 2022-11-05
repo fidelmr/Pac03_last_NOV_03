@@ -1,0 +1,22 @@
+a tenir en compte:
+El mode inferno és molt original, però cal vigilar amb el contrast del color text i el color de fons, no és gaire llegible
+El codi que queda comentat, funcions d'altres verions i codi que no es fa servir, igual que els console logs, millor eliminar-lo per millorar la llegibilitat de la resta del codi bo
+
+
+punts forts:
+pàgina amb instruccions d´ús. Sempre és bo donar el màxim context i informació a l'usuari
+varis estils al selector de temes
+pàgina d'error
+oferir diferents opcions del filtre (tot i que les 2 últimes estàn deshabilitades)
+codi ben documentat
+
+comentaris/alternatives:
+en general, bon desglòs de components. Cal tenir en compte que els components s'han de pensar com aquelles parts o elements que es poden reutilitzar, ara
+o en una futura ampliació del projecte. Alguns elements, si han de ser estàtics potser no cal "componetitzar-los" tant, com per exemple el footer. Si només
+està a la home i sempre ha de ser igual potser no cal desglosar-lo tant, però si, en canvi es té previst que a diferents pàgines es mostrin algunes o altres
+parts del footer, llavors sí que té sentit fer-lo modular.
+
+Desde la vista es podrien llistar directament les cartes, sense passar per un component intermig com PokeLlistat, i delegar les funcions de PokeLlistat a la 
+pròpia vista. Per exemple, per llistar els pokemons, es podria tenir una vista "LlistaPokemons"; des d'aquesta vista es pot consultar a la API i retornar
+un llistat de Pokemons en un array. Aquest array es pot recorrer i pintar els components "Carta" a través d'un v-for. Aquesta vista podria tenir implementat
+el comportament del filtre directament, o es podria tenir un altre component "Filtre" que s'encarregui d'això.
